@@ -1,0 +1,101 @@
+{
+  "credentials": {
+    "clientid": "e67c8d9c3b7b4bb4b0376e115d225ce0",
+    "file": "getRdsLogins.secret",
+    "passphrase": "U2FsdGVkX19lrbedaFk0gCALaLdsftDVnrpihx4IfddFkXczPNIRpTghK90dXQadZikpb78B41rrxrDvJ8rlyA=="
+  },
+  "servers": {
+    "europe": {},
+    "north_america": {
+      "datapipe_nj2": {
+        "gateway": [
+          "nysv-vmrdgw02.tpnyc.local",
+          "nysv-vmrdgw03.tpnyc.local",
+          "nysv-vmrdgw05.tpnyc.local",
+          "nysv-vmrdgw06.tpnyc.local",
+          "nysv-vmrdgwoi.tpnyc.local",
+          "nysv-vmrdgwu.tpnyc.local"
+        ],
+        "license": [
+          "nysv-vmrdlic-oi.tpnyc.local"
+        ],
+        "session_host": [
+          "ny2sv-vmrdsh01",
+          "ny2sv-vmrdsh02",
+          "ny2sv-vmrdsh03",
+          "ny2sv-vmrdsh04",
+          "nyisv-hvvidi",
+          "nyisv-hvvld2",
+          "nysv-vmrdsh03",
+          "nysv-vmrdsh05",
+          "nysv-vmrdsh06",
+          "nysv-vmrdsh07",
+          "nysv-vmrdsh08",
+          "nysv-vmrdsh09",
+          "nysv-vmrdsh12",
+          "nysv-vmrdsh13",
+          "nysv-vmrdsh14",
+          "nysv-vmrdsh16",
+          "nysv-vmrdsh18",
+          "nysv-vmrdsh19",
+          "nysv-vmrdsh20",
+          "nysv-vmrdsh21",
+          "nysv-vmrdsh22",
+          "nysv-vmrdsh23",
+          "nysv-vmrdsh24",
+          "nysv-vmrdsh25",
+          "nysv-vmrdsh26",
+          "nysv-vmrdsh27",
+          "nysv-vmrdsh28",
+          "nysv-vmrdsh29",
+          "nysv-vmrdsh30",
+          "nysv-vmrdsh31",
+          "nysv-vmrdsh32",
+          "nysv-vmrdsh33",
+          "nysv-vmrdsh34",
+          "nysv-vmrdsh35",
+          "nysv-vmrdsh36",
+          "nysv-vmrdsh37",
+          "nysv-vmrdsh38",
+          "nysv-vmrdsh39",
+          "nysv-vmrdsh40",
+          "nysv-vmrdsh41",
+          "nysv-vmrdsh42",
+          "nysv-vmrdsh43",
+          "nysv-vmrdsh44",
+          "nysv-vmrdsh45",
+          "nysv-vmrdsh46",
+          "nysv-vmrdsh47",
+          "nysv-vmrdsh48",
+          "nysv-vmrdsh49",
+          "nysv-vmrdsh50",
+          "nysv-vmrdsh51",
+          "nysv-vmrdsh52"
+        ],
+        "ai_apps": [
+          "nysv-vmrdshap02",
+          "nysv-vmrdshap03",
+          "nysv-vmrdshap05",
+          "nysv-vmrdshap06",
+          "nysv-vmrdshapoi",
+          "nysv-vmrdshapu"
+        ],
+        "encp": [
+          "nysv-vmrdshdvoi",
+          "nysv-vmrdshen02",
+          "nysv-vmrdshenoi",
+          "nysv-vmrdshi1",
+          "nysv-vmrdshi5",
+          "nysv-vmrdshi7",
+          "nysv-vmrdshoi"
+        ]
+	  }
+    }
+  },
+  "sites": {
+    "amsterdam": "europe",
+    "datapipe_nj2": "north_america",
+    "frankfurt": "europe",
+    "h5": "north_america"
+  }
+}

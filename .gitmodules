@@ -1,0 +1,6 @@
+[submodule "general/scripts"]
+	path = general/scripts
+	url = https://github.com/daniel-steidl-tpt/ps-scripts-general.git
+[submodule "general/modules"]
+	path = general/modules
+	url = https://github.com/daniel-steidl-tpt/ps-modules-general.git
