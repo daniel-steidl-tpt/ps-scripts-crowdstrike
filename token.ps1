@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS
-Retrieve OAuth token from microsoft.com to perform Graph API calls using Invoke-WebRequest cmdlet
+Retrieve OAuth token from CrowdStike API using Invoke-WebRequest cmdlet.
 
 .DESCRIPTION
-Retrieve OAuth token from microsoft.com to perform Graph API calls using Invoke-WebRequest cmdlet
+Retrieve OAuth token from CrowdStike API using Invoke-WebRequest cmdlet.
 #>
 #
 #--[[Requirements]]-------------------------------------------------------------
@@ -126,7 +126,10 @@ function Main() {
       }
       #------------------------------------------------
 
-      $global:crowdToken = [CrowdStrikeToken]::new($script:mapParams["clientid"], $script:mapParams["password"])
+      ## Create new global crowdToken object
+      #------------------------------------------------
+      $global:crowdToken = New-CrowdStrikeToken -clientid $script:mapParams["clientid"] -password $script:mapParams["password"]
+      #------------------------------------------------
 
       if ( $script:mapParams["force"] ) {
         if ( $global:crowdToken.Generate($True) ) {
@@ -357,13 +360,13 @@ if ( $args.Length -le 0 ) {
 # Set a global variable for token object
 #--------------------------------------
 if ( -not ($global:crowdToken) ) {
-  [CrowdStrikeToken]$global:crowdToken = $Null
+  $global:crowdToken = $Null
 }
 #--------------------------------------
 
 ## Disable SSL validation
 #------------------------------------------------------
-& "./general/scripts/disable-ssl-validation.ps1"
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $True }
 #------------------------------------------------------
 
 ## Process Options

@@ -38,8 +38,8 @@ Get login events from Crowdstrike monitored hosts.
 [pscustomobject]$script:output = $Null
 [pscustomobject[]]$script:data = $Null
 [System.Collections.Generic.List[string]]$script:command = @()
-[GeneralUtils]$script:genUtils = [GeneralUtils]::new()
-[CrowdStrikeUtils]$script:crowdUtils = [CrowdStrikeUtils]::new()
+$script:genUtils = New-GeneralUtils
+$script:crowdUtils = New-CrowdStrikeUtils
 #------------------------------------------------------------------------------
 #
 #--[[ Functions ]]-------------------------------------------------------------
@@ -453,19 +453,6 @@ if ( $args.Length -le 0 ) {
 }
 #------------------------------------------------------
 
-## Test for the global token variable. If not found, then test
-## for Microsoft.Graph module.
-#------------------------------------------------------
-if ( -not ($global:crowdToken) ) {
-  if ( -not (_importPsModule) ) {
-    $script:output = New-Object -TypeName PSObject -Property @{error = $script:mapError}
-    Write-Output $script:Output | ConvertTo-Json
-    exit 1
-  }
-  $script:usePsModule = $True
-}
-#------------------------------------------------------
-
 ## Get environment
 #------------------------------------------------------
 _getEnvironment
@@ -473,7 +460,7 @@ _getEnvironment
 
 ## Disable SSL validation
 #------------------------------------------------------
-& "./general/scripts/disable-ssl-validation.ps1"
+[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $True }
 #------------------------------------------------------
 
 ## Process Options

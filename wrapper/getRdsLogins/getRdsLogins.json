@@ -9,15 +9,15 @@
     "north_america": {
       "datapipe_nj2": {
         "gateway": [
-          "nysv-vmrdgw02.tpnyc.local",
-          "nysv-vmrdgw03.tpnyc.local",
-          "nysv-vmrdgw05.tpnyc.local",
-          "nysv-vmrdgw06.tpnyc.local",
-          "nysv-vmrdgwoi.tpnyc.local",
-          "nysv-vmrdgwu.tpnyc.local"
+          "nysv-vmrdgw02",
+          "nysv-vmrdgw03",
+          "nysv-vmrdgw05",
+          "nysv-vmrdgw06",
+          "nysv-vmrdgwoi",
+          "nysv-vmrdgwu"
         ],
         "license": [
-          "nysv-vmrdlic-oi.tpnyc.local"
+          "nysv-vmrdlic-oi"
         ],
         "session_host": [
           "ny2sv-vmrdsh01",
@@ -89,7 +89,43 @@
           "nysv-vmrdshi7",
           "nysv-vmrdshoi"
         ]
-	  }
+	  },
+      "h5": {
+        "connection_broker": [
+          "ctxsv-vmrdbr01",
+          "ctxsv-vmrdbr02"
+        ],
+        "gateway": [
+          "ctxsv-vmrdgw01",
+          "ctxsv-vmrdgw02",
+          "ctxsv-vmrdgw04"
+        ],
+        "license": [
+          "ctxsv-vmrdlic01"
+        ],
+        "session_host": [
+          "ctxsv-vmrdsh01",
+          "ctxsv-vmrdsh02",
+          "ctxsv-vmrdsh03",
+          "ctxsv-vmrdsh04",
+          "ctxsv-vmrdsh05",
+          "ctxsv-vmrdsh06",
+          "ctxsv-vmrdsh07",
+          "ctxsv-vmrdsh08",
+          "ctxsv-vmrdsh09",
+          "ctxsv-vmrdsh10",
+          "ctxsv-vmrdsh11",
+          "ctxsv-vmrdsh12",
+          "ctxsv-vmrdsh13",
+          "ctxsv-vmrdsh14",
+          "ctxsv-vmrdsh15",
+          "ctxsv-vmrdsh16",
+          "ctxsv-vmrdsh17",
+          "ctxsv-vmrdsh18",
+          "ctxsv-vmrdsh19",
+          "ctxsv-vmrdsh20"
+        ]
+      }
     }
   },
   "sites": {

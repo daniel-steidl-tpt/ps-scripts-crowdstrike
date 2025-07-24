@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS
-Powershell class to retrieve OAuth token from Microsoft.com to perform API calls.
+Powershell class to retrieve OAuth token from CrowdStrike to perform API calls.
 
 .DESCRIPTION
-Powershell class to retrieve OAuth token from Microsoft.com to perform API calls.
+Powershell class to retrieve OAuth token from CrowdStrike to perform API calls.
 #>
 
 #-------------------------------------------------------------------------------
@@ -452,8 +452,9 @@ function New-CrowdStrikeToken() {
   ## Local Parameters
   #----------------------------------------------------
   param (
-    [string]$clientid,
-    [string]$password
+    [Parameter(mandatory=$True)][string]$clientid,
+    [Parameter(mandatory=$True)][string]$password,
+    [Parameter(mandatory=$False)][string]$file
   )
   #----------------------------------------------------
 
@@ -461,7 +462,12 @@ function New-CrowdStrikeToken() {
   #----------------------------------------------------
   #----------------------------------------------------
 
-  [CrowdStrikeToken]::new($clientid, $password)
+  if ( [string]::IsNullOrEmpty($file) ) {
+    [CrowdStrikeToken]::new($clientid, $password)
+  }
+  else {
+    [CrowdStrikeToken]::new($clientid, $password, $file)
+  }
 }
 #------------------------------------------------------
 #
